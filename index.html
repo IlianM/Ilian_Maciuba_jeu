@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <title>Lézardus deviendra grand</title>
+    <link rel="icon" type="" href="lezard_left.png">
 </head>
 
 <body>
@@ -13,10 +13,21 @@
         <div>
             <span>Lézardus deviendra grand...</span>
         </div>
-        <button id="Jouer" onclick="draw()">Jouer</button>
+        <button id="Jouer">Jouer</button>
     </div>
+    <div>
+        <span id="Game_Over">GAME OVER
+            <div id="restart">
+                <button id="restart_button">RESTART</button>
+            </div>
+        </span>
+
+    </div>
+
+
+
     <div id="Game">
-        <canvas id="Screen" width="800" height="500"></canvas>
+        <canvas id="Screen" width="600" height="600"></canvas>
         <div id="Game_Info">
             <span id="Score">Score : </span>
             <span id="HighScore">HighScore : </span>
@@ -24,6 +35,8 @@
 
         </div>
     </div>
+    <script src="script.js"></script>
+
 </body>
 
 </html>

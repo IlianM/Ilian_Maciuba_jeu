@@ -1,17 +1,20 @@
-html,
-button {
+html {
     font-family: 'PressStart';
-    background-color: rgb(28, 28, 119);
+    background-image: url('desert.png');
+    background-size: cover;
+}
+
+button {
+    background-image: url('sand.png');
+    font-family: 'PressStart';
+    background-size: cover;
+    border-color: #000000;
+    border: solid 10px;
 }
 
 @font-face {
     font-family: 'PressStart';
     src: url('font/PressStart.ttf') format('truetype');
-}
-
-body {
-
-    /* Remplacez "sans-serif" par une police de secours générique */
 }
 
 #ecran_accueil {
@@ -20,6 +23,7 @@ body {
     justify-content: center;
     font-size: 40px;
     margin: 10%;
+    align-items: center;
 }
 
 #Jouer {
@@ -30,43 +34,100 @@ body {
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
-    border: 5px solid black;
     color: #000000;
     background-color: rgb(28, 28, 119);
-    border-radius: 20px;
+    border-radius: 1.5rem;
+    width: 50%;
 }
 
 #Game {
     display: none;
     justify-content: center;
-    height: 800px;
+    height: 100%;
     width: 100%;
-    background-color: rgb(28, 28, 119);
     flex-direction: column;
     align-items: center;
+
 
 }
 
 #Screen {
-    background-color: rgb(193, 193, 193);
     border: 5px solid black;
     margin-top: 20px;
+    position: fixed;
+    /* Position fixe par rapport à la fenêtre */
+    top: 50%;
+    /* 50% du haut de la fenêtre */
+    left: 50%;
+    /* 50% de la gauche de la fenêtre */
+    transform: translate(-50%, -50%);
+    /* Déplacer l'élément de -50% de sa propre largeur et hauteur */
+    align-items: center;
+    background-image: url('sand.png');
+    background-repeat: repeat;
+    /* Définir la taille de l'image de fond */
+    background-size: 70%;
+    /* Vous pouvez ajuster le pourcentage selon vos besoins */
 }
 
-#Score {
-    margin: 30px 70px 30px 70px;
+#Game_Over {
+    display: none;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
-#HighScore {
-    margin: 30px 70px 30px 70px;
+
+#restart {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+
 }
 
+#restart_button {
+    font-size: 50px;
+    margin-top: 10%;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #111827;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+}
+
+#Score,
+#HighScore,
 #Time {
-    margin: 30px 70px 30px 70px;
+    margin: 30px 0px 30px 0px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 2px solid black;
+    /* Bordure noire de 2px */
+    border-radius: 5px;
+    padding: 5px 10px;
+    /* Optionnel : pour arrondir les coins de la bordure */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Optionnel : ajoute une ombre */
 }
 
+#HighScore,
+#Time {
+    margin-left: 50px;
+}
 
 #Game_Info {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
