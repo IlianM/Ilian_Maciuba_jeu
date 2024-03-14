@@ -10,11 +10,16 @@
 
 <body>
     <div id="ecran_accueil">
-        <div>
+        <div id="titre_jeu">
             <span>Lézardus deviendra grand...</span>
         </div>
-        <button id="Jouer">Jouer</button>
+        <form id="formulaire_nom">
+            <input type="text" id="nom_utilisateur"
+                placeholder="Entrez votre nom" required>
+            <button type="submit" id="Jouer">Jouer</button>
+        </form>
     </div>
+
     <div>
         <span id="Game_Over">GAME OVER
             <div id="restart">
