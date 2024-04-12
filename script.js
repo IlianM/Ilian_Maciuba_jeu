@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (head.x === food.x && head.y === food.y) {
             score++;
             Score.textContent = "Score : " + score;
+            SNAKE_SPEED += 0.3;
+
             placeFood();
         } else {
             snake.pop();
